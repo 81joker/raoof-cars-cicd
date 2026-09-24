@@ -25,5 +25,5 @@ jobs:
             --exclude 'node_modules/' \
             --exclude '.DS_Store' \
             -e "ssh -p ${{ secrets.SSH_PORT }}" \
-            ./themes/raoof-cars-wp-theme/ \
+            ./themes/raoof-cars-wp-theme/** \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.REMOTE_PATH }}/wp-content/themes/raoof-cars-wp-theme/
