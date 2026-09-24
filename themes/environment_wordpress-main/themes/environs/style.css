@@ -1,0 +1,50 @@
+/*
+Theme Name: environs
+Theme URI: https://wordpress.nehaddev.com/
+Author: Nehad Altimimi
+Author URI: https://wordpress.nehaddev.com/
+Description: Environs is a free nature and wildlife website template for environmental-based projects.
+Requires at least: 5.6
+Requires PHP: 8.0
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: wp-devs
+Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
+*/
+
+/**
+1. Normalize
+2. Theme Specific CSS
+*/
+
+
+/* 1. Normalize */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+
+

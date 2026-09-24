@@ -1,0 +1,40 @@
+/*
+Theme Name: Raoof Cars
+Theme URI: https://raoofcars.com
+Author: Raoof Cars Team
+Description: Arabic RTL luxury car rental WordPress theme based on Raoof Cars design system.
+Version: 1.1.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 8.0
+Text Domain: raoof-cars
+*/
+
+html {
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  background: #f5f0e8;
+  font-family: var(--font-arabic);
+  color: var(--fg1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(212, 160, 23, 0.3);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #d4a017 !important;
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2);
+}
+

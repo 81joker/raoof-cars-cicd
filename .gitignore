@@ -1,0 +1,7 @@
+uploads/
+cache/
+upgrade/
+litespeed/
+debug.log
+node_modules/
+*.sql

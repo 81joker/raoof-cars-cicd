@@ -1,0 +1,247 @@
+/* =========================================================================
+   Raoof Cars — Colors & Typography Foundation
+   ========================================================================= */
+
+/* Webfonts: Tajawal (primary), Cairo (display alt), Noto Kufi Arabic (fallback)
+   Loaded via Google Fonts in HTML head. Latin: Cormorant Garamond for the
+   "Raoof Cars" wordmark + Latin numerics; Inter for European fallback UI. */
+
+:root {
+  /* ----------------------------------------------------------------------
+     COLORS — Raoof palette
+     A luxury 5-star concierge feel: deep black, rich gold, warm cream.
+     ---------------------------------------------------------------------- */
+
+  /* Brand core */
+  --raoof-black:        #111111;   /* Primary nav, hero, dark sections */
+  --raoof-black-soft:   #1A1A1A;   /* Card backgrounds on dark */
+  --raoof-black-elev:   #222222;   /* Elevated surfaces on dark */
+  --raoof-gold:         #D4A017;   /* Primary accent — headings, buttons, highlights */
+  --raoof-gold-bright:  #E5B82E;   /* Hover state for gold */
+  --raoof-gold-deep:    #B8881A;   /* Pressed state, deeper accents */
+  --raoof-gold-soft:    #E8C76B;   /* Soft gold for subtle highlights */
+
+  /* Cream / neutral surfaces */
+  --raoof-cream:        #F5F0E8;   /* Section backgrounds */
+  --raoof-cream-warm:   #EDE5D6;   /* Slightly deeper cream — alt sections */
+  --raoof-paper:        #FBF8F2;   /* Lightest tint for cards on cream */
+  --raoof-ivory:        #FFFFFF;
+
+  /* Text */
+  --raoof-charcoal:     #1F1B16;   /* Primary text on light */
+  --raoof-graphite:     #4A463E;   /* Secondary text on light */
+  --raoof-stone:        #8A857B;   /* Muted text on light */
+  --raoof-line:         #D9D2C4;   /* Hairline borders on cream */
+
+  /* Text on dark */
+  --raoof-text-on-dark:        #FFFFFF;
+  --raoof-text-on-dark-muted:  rgba(255, 255, 255, 0.72);
+  --raoof-text-on-dark-faint:  rgba(255, 255, 255, 0.52);
+  --raoof-line-on-dark:        rgba(255, 255, 255, 0.12);
+  --raoof-line-on-dark-strong: rgba(255, 255, 255, 0.24);
+
+  /* Semantic — used sparingly */
+  --raoof-success:      #2E7D5B;   /* WhatsApp green pairs nicely */
+  --raoof-whatsapp:     #25D366;
+  --raoof-danger:       #B33A3A;
+
+  /* Semantic foreground/background pairs */
+  --fg1: var(--raoof-charcoal);
+  --fg2: var(--raoof-graphite);
+  --fg3: var(--raoof-stone);
+  --bg1: var(--raoof-cream);
+  --bg2: var(--raoof-paper);
+  --bg-dark: var(--raoof-black);
+  --accent: var(--raoof-gold);
+  --accent-hover: var(--raoof-gold-bright);
+  --line: var(--raoof-line);
+
+  /* ----------------------------------------------------------------------
+     TYPOGRAPHY — Arabic-first
+     Tajawal is the primary workhorse. Cairo for large display headlines.
+     Cormorant Garamond brings the Latin "Raoof Cars" wordmark its serif
+     elegance — used ONLY for the latin brand mark and a few latin numerics.
+     ---------------------------------------------------------------------- */
+
+  --font-arabic:        "Tajawal", "Noto Kufi Arabic", "Segoe UI", Tahoma, sans-serif;
+  --font-arabic-display:"Cairo", "Tajawal", "Noto Kufi Arabic", sans-serif;
+  --font-latin-serif:   "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-latin-sans:    "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Type scale (Arabic reads slightly larger than Latin at the same size,
+     so we tune up vs. typical Western scales) */
+  --fs-display:   64px;   /* Hero headlines */
+  --fs-h1:        48px;   /* Page titles */
+  --fs-h2:        36px;   /* Section titles */
+  --fs-h3:        28px;   /* Subsection / card titles */
+  --fs-h4:        22px;   /* Small headings */
+  --fs-body-lg:   20px;   /* Lead paragraph */
+  --fs-body:      18px;   /* Default body */
+  --fs-body-sm:   16px;   /* Small body */
+  --fs-caption:   14px;   /* Captions, fine print */
+  --fs-micro:     12px;   /* Labels, tags */
+
+  --lh-tight:     1.15;
+  --lh-snug:      1.35;
+  --lh-body:      1.75;   /* Arabic needs a generous line-height */
+  --lh-loose:     1.9;
+
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-bold:      700;
+  --fw-black:     900;
+
+  --tracking-wide:    0.04em;
+  --tracking-default: 0;
+  --tracking-tight:   -0.01em;
+
+  /* ----------------------------------------------------------------------
+     SPACING — 4px base, tuned for spacious luxury feel
+     ---------------------------------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* Radii — restrained. Luxury reads as sharp/architectural, not pill-y. */
+  --r-sm:  2px;
+  --r-md:  4px;
+  --r-lg:  8px;
+  --r-xl:  12px;
+  --r-pill: 999px;
+
+  /* Borders */
+  --border-thin:   1px solid var(--raoof-line);
+  --border-gold:   1px solid var(--raoof-gold);
+  --border-gold-2: 2px solid var(--raoof-gold);
+
+  /* Shadows — soft, never harsh */
+  --shadow-xs: 0 1px 2px rgba(17, 17, 17, 0.06);
+  --shadow-sm: 0 2px 8px rgba(17, 17, 17, 0.06), 0 1px 2px rgba(17, 17, 17, 0.04);
+  --shadow-md: 0 8px 24px rgba(17, 17, 17, 0.08), 0 2px 6px rgba(17, 17, 17, 0.04);
+  --shadow-lg: 0 16px 40px rgba(17, 17, 17, 0.12), 0 4px 10px rgba(17, 17, 17, 0.06);
+  --shadow-gold-glow: 0 8px 24px rgba(212, 160, 23, 0.22);
+  --shadow-on-dark: 0 12px 36px rgba(0, 0, 0, 0.45);
+
+  /* Easing & motion */
+  --ease-quiet: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-press: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   140ms;
+  --dur-base:   220ms;
+  --dur-slow:   400ms;
+
+  /* Container widths */
+  --container-narrow: 960px;
+  --container:        1200px;
+  --container-wide:   1440px;
+}
+
+/* =========================================================================
+   SEMANTIC TYPE STYLES — apply these classes anywhere
+   ========================================================================= */
+
+html { font-family: var(--font-arabic); color: var(--fg1); }
+
+/* Force RTL by default for Arabic site */
+html[lang="ar"], [dir="rtl"] { direction: rtl; }
+
+.t-display {
+  font-family: var(--font-arabic-display);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.t-h1 {
+  font-family: var(--font-arabic-display);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+.t-h2 {
+  font-family: var(--font-arabic-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  color: var(--raoof-gold);
+}
+
+.t-h3 {
+  font-family: var(--font-arabic-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+}
+
+.t-h4 {
+  font-family: var(--font-arabic);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+}
+
+.t-lead {
+  font-family: var(--font-arabic);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+}
+
+.t-body {
+  font-family: var(--font-arabic);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--fg1);
+}
+
+.t-body-sm {
+  font-family: var(--font-arabic);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+}
+
+.t-caption {
+  font-family: var(--font-arabic);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-snug);
+  color: var(--fg3);
+}
+
+.t-eyebrow {
+  font-family: var(--font-arabic);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--raoof-gold);
+}
+
+.t-wordmark {
+  font-family: var(--font-latin-serif);
+  font-weight: var(--fw-bold);
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: var(--raoof-gold);
+}
+
+/* Convenience selectors */
+.text-gold { color: var(--raoof-gold); }
+.text-cream { color: var(--raoof-cream); }
+.text-on-dark { color: var(--raoof-text-on-dark); }
+.bg-black { background: var(--raoof-black); color: var(--raoof-text-on-dark); }
+.bg-cream { background: var(--raoof-cream); color: var(--fg1); }
+.bg-paper { background: var(--raoof-paper); color: var(--fg1); }
