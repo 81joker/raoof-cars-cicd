@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'themes/raoof-cars-wp-theme/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 jobs:
@@ -11,6 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check secrets
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
+        run: |
+          for v in SSH_HOST SSH_PORT SSH_USER SSH_KEY REMOTE_PATH; do
+            if [ -z "${!v}" ]; then echo "❌ $v is empty"; FAIL=1; else echo "✅ $v"; fi
+          done
+          [ -z "$FAIL" ]
 
       - name: Setup SSH
         run: |
@@ -25,5 +39,5 @@ jobs:
             --exclude 'node_modules/' \
             --exclude '.DS_Store' \
             -e "ssh -p ${{ secrets.SSH_PORT }}" \
-            ./themes/raoof-cars-wp-theme/** \
+            ./themes/raoof-cars-wp-theme/ \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.REMOTE_PATH }}/wp-content/themes/raoof-cars-wp-theme/
