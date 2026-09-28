@@ -5,3 +5,4 @@ litespeed/
 debug.log
 node_modules/
 *.sql
+*Zone.Identifier
